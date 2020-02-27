@@ -5,6 +5,8 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
+    android:paddingStart="@dimen/padding"
+    android:paddingEnd="@dimen/padding"
     tools:context=".MainActivity">
 
     <TextView
@@ -16,11 +18,33 @@
         android:textAlignment="center" />
 
     <ImageView
-        android:id="@+id/star_image"
+        android:id="@+id/bio_header_image"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginTop="16dp"
-        android:contentDescription="@string/yellow_star"
-        app:srcCompat="@android:drawable/btn_star_big_on" />
+        android:contentDescription="@string/android_robot_head"
+        android:tint="@color/colorPrimaryDark"
+        app:srcCompat="@drawable/ic_launcher_foreground"
+        tools:ignore="VectorDrawableCompat" />
+
+    <ScrollView
+        android:id="@+id/bio_scroll"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:id="@+id/bio_text"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:lineSpacingMultiplier="@dimen/bio_line_spacing"
+                android:text="@string/bio_content" />
+
+        </LinearLayout>
+
+    </ScrollView>
 
 </LinearLayout>

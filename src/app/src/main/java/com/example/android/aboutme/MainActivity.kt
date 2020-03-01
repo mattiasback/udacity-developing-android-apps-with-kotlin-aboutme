@@ -37,7 +37,7 @@ class MainActivity : AppCompatActivity() {
         val nickname: TextView = binding.nicknameText
         val saveButton = binding.saveNicknameButton
 
-        myName?.nickname = nicknameEdit.text.toString()
+        myName.nickname = nicknameEdit.text.toString()
         binding.invalidateAll()
         saveButton.visibility = GONE
         nicknameEdit.visibility = GONE
